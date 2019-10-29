@@ -110,25 +110,26 @@
         $('#dp3').datepicker()
         
 
-    // TweenMax.set(or,{x:2500});
-    // TweenMax.set(fame, {scale:4});
-    // TweenMax.to(fame, 2.5, {scale:1, opacity:1, ease: Elastic.easeOut.config(1, 0.3), onStart: function(){
-    //     TweenMax.to(or, 1, {ease: Elastic.easeInOut.config(1, 0.75), x: 0, delay:.5,onComplete:function(){
-    //         TweenMax.to(shameOn, 3, {opacity:1, ease: RoughEase.ease.config({ template:  Power0.easeNone, strength: 1, points: 50, taper: "none", randomize: true, clamp: false}), onComplete: nextPage});
-    //     }});
-        
-    //     }
-    // });
-
+    
     TweenMax.set(or,{x:2500});
     TweenMax.set(fame, {scale:4});
-    TweenMax.to(fame, .1, {scale:1, opacity:1, ease: Elastic.easeOut.config(1, 0.3), onStart: function(){
-        TweenMax.to(or, .1, {ease: Elastic.easeInOut.config(1, 0.75), x: 0, delay:0,onComplete:function(){
-            TweenMax.to(shameOn, 0, {opacity:1, ease: RoughEase.ease.config({ template:  Power0.easeNone, strength: 1, points: 50, taper: "none", randomize: true, clamp: false}), onComplete: nextPage});
+    TweenMax.to(fame, 2.5, {scale:1, opacity:1, ease: Elastic.easeOut.config(1, 0.3), onStart: function(){
+        TweenMax.to(or, 1, {ease: Elastic.easeInOut.config(1, 0.75), x: 0, delay:.5,onComplete:function(){
+            TweenMax.to(shameOn, 3, {opacity:1, ease: RoughEase.ease.config({ template:  Power0.easeNone, strength: 1, points: 50, taper: "none", randomize: true, clamp: false}), onComplete: nextPage});
         }});
         
         }
     });
+
+    // TweenMax.set(or,{x:2500});
+    // TweenMax.set(fame, {scale:4});
+    // TweenMax.to(fame, .1, {scale:1, opacity:1, ease: Elastic.easeOut.config(1, 0.3), onStart: function(){
+    //     TweenMax.to(or, .1, {ease: Elastic.easeInOut.config(1, 0.75), x: 0, delay:0,onComplete:function(){
+    //         TweenMax.to(shameOn, 0, {opacity:1, ease: RoughEase.ease.config({ template:  Power0.easeNone, strength: 1, points: 50, taper: "none", randomize: true, clamp: false}), onComplete: nextPage});
+    //     }});
+        
+    //     }
+    // });
     var options;
     var selects = document.getElementsByTagName("select");
     for(var x=0; x<=selects.length; x++){
