@@ -181,7 +181,65 @@ div {
   border: 0px solid #ced4da;
 }
 
+#enter{
+        position:absolute;
+        top: 28vw;
+        left: 33%;
+        opacity: 1;
+        max-width: 28vw;
+        z-index: 100;
+    }
+
+
+
+.pulse {
+  animation: pulse 3s infinite;
+  margin: 0 auto;
+  display: table;
+  /* margin-top: 50px; */
+
+  animation-direction: alternate;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 @media only screen and (min-width : 320px) {
+
+    #enter{
+        position:absolute;
+        top: 60vw;
+        left: 25%;
+        opacity: 1;
+        max-width: 48vw;
+        z-index: 100;
+    }
+
+
+
     .carousel{
         padding: 10% 0;
     }
@@ -240,6 +298,7 @@ div {
     left: 60%;
     top: 48vw;
     max-width: 20vw;
+    /* display: none; */
 }
 
 
@@ -294,6 +353,15 @@ div {
 }
 
 @media only screen  and (min-width : 1224px) {
+    #enter{
+        position:absolute;
+        top: 28vw;
+        left: 33%;
+        opacity: 1;
+        max-width: 28vw;
+        z-index: 100;
+    }
+
 
 
     .custom-select{
@@ -344,9 +412,10 @@ div {
     }
 
 
+
     #shame{
         position:absolute;
-        top: 18vw;
+        top: 38vw;
         left: 50%;
         opacity: .2;
         max-width: 28vw;

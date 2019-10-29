@@ -14,7 +14,6 @@
 
 <body>
     <div id="container">
-        
         <div id="main" class="main">
             <div id="bodyForm" class="">
                 <form class="td">
@@ -172,6 +171,7 @@
                 <img id="shame" src="images/shame_off.png"/>
                 <img id="shameOn" src="images/shame_on.png"/>
                 <img id="or" src="images/or.png"/>
+                <img id="enter" onclick="startAni()" class="pulse" src="images/return.png"/>
             </div>
         </div>
 
@@ -189,15 +189,41 @@
         
         $('.carousel').carousel('pause');
 
-    TweenMax.set(or,{x:2500});
-    TweenMax.set(fame, {scale:4});
-    TweenMax.to(fame, 2.5, {scale:1, opacity:1, ease: Elastic.easeOut.config(1, 0.3), onStart: function(){
+        TweenMax.set(or,{x:2500});
+        TweenMax.set(fame, {scale:4});
+    
+
+        var introSound = document.createElement("AUDIO");
+        main.appendChild(introSound);
+        introSound.src = "casino.m4a";
+
+        var options;
+        var selects = document.getElementsByTagName("select");
+        
+        for(var x=0; x<=selects.length; x++){
+            for(var i=0;i<=100;i++){
+                options = document.createElement("option");
+                selects[x].appendChild(options);
+                options.innerHTML = i;
+            }
+        }
+        
+
+
+    $('#clicker').on('click', startAni);
+
+    function startAni(){
+        TweenMax.to(enter,0, {opacity:0, css:{display:"none"}});
+        TweenMax.to(fame, 2.5, {scale:1, opacity:1, ease: Elastic.easeOut.config(1, 0.3), onStart: function(){
+        introSound.play();
         TweenMax.to(or, 1, {ease: Elastic.easeInOut.config(1, 0.75), x: 0, delay:.5,onComplete:function(){
             TweenMax.to(shameOn, 3, {opacity:1, ease: RoughEase.ease.config({ template:  Power0.easeNone, strength: 1, points: 50, taper: "none", randomize: true, clamp: false}), onComplete: nextPage});
         }});
         
         }
     });
+    }
+   
 
     // TweenMax.set(or,{x:2500});
     // TweenMax.set(fame, {scale:4});
@@ -208,15 +234,6 @@
         
     //     }
     // });
-    var options;
-    var selects = document.getElementsByTagName("select");
-    for(var x=0; x<=selects.length; x++){
-        for(var i=0;i<=100;i++){
-            options = document.createElement("option");
-            selects[x].appendChild(options);
-            options.innerHTML = i;
-        }
-    }
     
     // nextPage();
     
@@ -229,6 +246,8 @@
         TweenMax.to(header, 1, {css:{height:"50vw"}, delay:1});
         TweenMax.to([fame,shame,shameOn,or], 1, {y:-150, delay:1});
     }
+
+
     
     </script>
 </body>
