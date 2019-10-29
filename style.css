@@ -182,8 +182,12 @@ div {
 }
 
 @media only screen and (min-width : 320px) {
+    .carousel{
+        padding: 10% 0;
+    }
     .carousel_inner{
         overflow: visible;
+        /* padding: 10% 0; */
     }
 
     .custom-select{
@@ -240,7 +244,7 @@ div {
 
 
   .td {
-    top: 60vw;
+    top: 40vw;
     height: 100%;
   }
 
