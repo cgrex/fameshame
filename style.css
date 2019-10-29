@@ -45,14 +45,12 @@ div {
     height:100%;
     background-color:#40083a;
     position:absolute;
-    /*overflow: scroll;*/
 }
 
 .main {
     width:100%;
     height:100%;
     background-color: rgb(0,0,0,.6);
-    /* background-color:#40083a; */
     top: 0;
     left: 0;
     font-family:'Open Sans';
@@ -79,14 +77,14 @@ div {
 }
 
 #nameInput{
-    /*right:7%;*/
     width:10vw;
     position:relative;
 }
 #bodyForm{
     top:20vw;
+    height: 100%;
     position:absolute;
-    text-align:right;
+    text-align:center;
     overflow:scroll;
     
 }
@@ -120,7 +118,6 @@ div {
 #or{
     position: absolute;
     transform-origin: 50% 50%;
-    /* opacity: 0; */
     left: 52%;
     top: 13vw;
     max-width: 10vw;
@@ -131,7 +128,6 @@ div {
     width:100%;
     height:100%;
     position: absolute;
-    /* z-index:10; */
     background:linear-gradient(180deg, rgba(0,0,0,1) 50%, rgba(64,8,58,0) 100%);
     background-color:transparent;
 
@@ -141,44 +137,25 @@ div {
 .input{
 
     text-align:center;
-    /* border-radius:3vw; */
+    display: block;
     width:8vw;
     height:2vw;
     background-color:#4b0d44;
     color:white;
     position:relative;
     font-weight:800;
-    /* font-size:1vw; */
-    /*overflow:visible;*/
-    /*margin:auto;*/
+
 
 }
 
 .flex{
     margin:auto;
-    /*padding:2vw;*/
 }
 
 .td{
-    left:0;
-    padding: 0;
-    margin: 0;
-    position:relative;
-/*     list-style: none;
-    flex-direction:row;
-    flex-wrap:wrap;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap; */
-    width:60%;
-    left:20%;
-    height:30vw;
-    top: 5vw;
+
+    top: 10vw;
+    position: relative;
    
 }
 
@@ -187,8 +164,6 @@ div {
     padding-bottom:2vw;
     font-size:2vw;
     font-weight:600;
-    right:2%;
-    width:20vw;
     text-transform:uppercase;
 
 }
@@ -200,7 +175,11 @@ div {
 }
 
 .picker{
- border: 1px solid #ced4da;
+ border: 0px solid #ced4da;
+}
+
+.custom-select{
+  border: 0px solid #ced4da;
 }
 
 @media only screen and (min-width : 320px) {
@@ -214,15 +193,12 @@ div {
     .form-control{
         line-height: 1;
         border-radius: .8rem;
-        display: inline-block;
-        /* padding: .05rem 0.75rem .05rem 2.75rem; */
     }
 
     .picker{
         border: 1px solid #ced4da;
         line-height: 1;
         border-radius: .8rem;
-        /* padding: .05rem 0.75rem .05rem 2.75rem; */
     }
 
     #shame{
@@ -254,7 +230,6 @@ div {
 #or{
     position: absolute;
     transform-origin: 50% 50%;
-    /* opacity: 0; */
     left: 60%;
     top: 48vw;
     max-width: 20vw;
@@ -262,19 +237,12 @@ div {
 
 
   .td {
-    flex-direction: column;
-    top: 25vw;
-    /*left: 40%;*/
-    height:100%;
-    width:80vw;
-    text-align:center;
-    left:12vw;
-    padding-bottom: 20vw;
-
+    top: 60vw;
   }
 
   #bodyForm{
     width:100%;
+
     text-align:center;
     left:0%;
     opacity: 0;
@@ -285,15 +253,12 @@ div {
   }
 
   .input{
-    /* font-size:2vw; */
     width:30vw;
     height:5vw;
-    right:0;
     text-align:center;
   }
 
   .fuggedIt{
-    width:60vw;
     font-size:5vw;
     text-align:center;
   }
@@ -306,25 +271,20 @@ div {
     #datetext{
         right:0;
         text-align:center;
-        /*position:relative;*/
     }
 
     #name{
         right:0;
-        /*position:relative;*/
     }
 
     #nameInput{
         right:0;
         width:30vw;
-        /*position:relative;*/
     }
 
 }
 
-/* Desktops and laptops ----------- */
 @media only screen  and (min-width : 1224px) {
-/* Styles */
 
     .custom-select{
         line-height: 1;
@@ -335,14 +295,11 @@ div {
     .form-control{
         line-height: 1;
         border-radius: 3rem;
-        display: inline-block;
-        /* padding: .05rem 0.75rem .05rem 4.0rem; */
     }
 
     .picker{
         border: 1px solid #ced4da;
         line-height: 1;
-        /* left: 1.5%; */
         border-radius: 3rem;
         
     }
@@ -364,16 +321,14 @@ div {
     }
 
     #nameInput{
-        /*right:7%;*/
         width:10vw;
         position:relative;
     }
     #bodyForm{
         top:20vw;
         position:absolute;
-        text-align:right;
+        text-align:center;
         overflow:scroll;
-        /* display: none; */
         
     }
 
@@ -406,7 +361,6 @@ div {
     #or{
         position: absolute;
         transform-origin: 50% 50%;
-        /* opacity: 0; */
         left: 57%;
         top: 33vw;
         max-width: 10vw;
@@ -418,7 +372,6 @@ div {
         height:100%;
         top: -20vw;
         position: absolute;
-        /* z-index:10; */
         background:linear-gradient(180deg, rgba(0,0,0,1) 50%, rgba(64,8,58,0) 100%);
         background-color:transparent;
 
@@ -428,46 +381,23 @@ div {
     .input{
 
         text-align:center;
-        /* border-radius:3vw; */
         width:8vw;
         height:2vw;
-        background-color:#4b0d44;
+        background-color:#524a51;
         color:white;
-        /*right:2%;*/
         position:relative;
         font-weight:800;
-        /* font-size:1vw; */
-        /*overflow:visible;*/
-        /*margin:auto;*/
+
 
     }
 
     .flex{
         margin:auto;
-        /*padding:2vw;*/
     }
 
     .td{
-        left:0;
-        padding: 0;
-        margin: 0;
-        position:relative;
-        /* list-style: none;
-        flex-direction:row;
-        flex-wrap:wrap;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-flow: row wrap; */
-        width:60%;
-        left:20%;
-        height:100%;
-        top: 15vw;
-        padding-bottom: 20vw;
+
+        top: 10vw;
        
     }
 
@@ -476,10 +406,6 @@ div {
         padding-bottom:2vw;
         font-size:2vw;
         font-weight:600;
-        right:2%;
-        width:20vw;
-        text-transform:uppercase;
-
     }
 
 }
