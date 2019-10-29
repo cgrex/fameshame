@@ -269,6 +269,7 @@ div {
     width:80vw;
     text-align:center;
     left:12vw;
+    padding-bottom: 20vw;
 
   }
 
@@ -466,6 +467,7 @@ div {
         left:20%;
         height:100%;
         top: 15vw;
+        padding-bottom: 20vw;
        
     }
 
